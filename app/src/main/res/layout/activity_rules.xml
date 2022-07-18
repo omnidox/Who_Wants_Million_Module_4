@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scroll"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/background">
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".Rules">
+
+    <TextView
+        android:id="@+id/rulesBanner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="72dp"
+        android:gravity="center"
+        android:paddingBottom="20dp"
+        android:text="The Quiz Game! Rules"
+        android:textColor="#FFFFFF"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/rulesText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Welcome to the Quiz Game!
+
+The rules are simple,
+
+Choose the correct answer out of the four options given to you.
+
+Finish the quiz before the timer runs out.
+
+If the timer runs out, any correct questions will be recorded.
+
+Your correct answers will automatically be added to a history of your personal scores.
+
+You can click on &quot;Check Score History&quot; to see a list of your scores.
+
+\n\nGood Luck!"
+        android:paddingBottom="30dp"
+        android:gravity="center"
+        android:textColor="#FFFFFF"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/rulesBanner" />
+
+
+
+    <com.google.android.material.chip.ChipGroup
+        android:layout_width="181dp"
+        android:layout_height="276dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rulesText">
+
+
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chipPlay2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:chipBackgroundColor="#ADD8E6"
+            android:text="Play Game!"
+            android:textAlignment="center"/>
+
+
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chipHomePage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:chipBackgroundColor="#ADD8E6"
+            android:text="Home Page"
+            android:textAlignment="center"/>
+    </com.google.android.material.chip.ChipGroup>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
