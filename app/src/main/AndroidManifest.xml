@@ -14,16 +14,13 @@
         android:theme="@style/Theme.Who_Wants_Million_Module_4"
         tools:targetApi="31">
         <activity
+            android:name=".millionaire_Win"
+            android:exported="false" />
+        <activity
             android:name=".PrevScores"
             android:exported="false" />
         <activity
-            android:name=".Rules"
-            android:exported="false" />
-        <activity
             android:name=".RegistrationPage"
-            android:exported="false" />
-        <activity
-            android:name=".DisplayScreen"
             android:exported="false" />
         <activity
             android:name=".LoginRegisterPage"

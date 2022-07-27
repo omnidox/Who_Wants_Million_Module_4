@@ -18,7 +18,6 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         userView = findViewById(R.id.textWelcomeUser);
-        Button btnRules = (Button) findViewById(R.id.chipRules);
         Button btnPlay = (Button) findViewById(R.id.chipPlay);
         Button btnHigh = (Button) findViewById(R.id.chipHigh);
         Button btnLogOut = (Button) findViewById(R.id.chipLogOut);
@@ -53,14 +52,6 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        //Has the user go to the rules page
-        btnRules.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this,Rules.class );
-                startActivity(intent);
-            }
-        });
 
 
         //Enables the user to see their previous scores

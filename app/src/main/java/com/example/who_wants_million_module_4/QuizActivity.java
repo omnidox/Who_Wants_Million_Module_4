@@ -11,15 +11,25 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.AppCompatButton;
 
+import com.google.android.material.snackbar.Snackbar;
+
 import java.util.List;
-import java.util.Timer;
-import java.util.TimerTask;
+
 
 //Quiz Activity made with the help of the following tutorial
 //https://www.youtube.com/watch?v=vpT0eIUREC0&ab_channel=Learnoset-LearnCodingOnline
 
 
 public class QuizActivity extends AppCompatActivity {
+
+    private TextView money_Won_Textview;
+    private TextView money_Guaranteed_Textview;
+
+    private int currMoneyWon = 0;
+
+    private int finalMoney= 0;
+
+    private final int[] prizeMoneyRange = {100, 200, 300, 500, 1000, 2000, 4000, 8000, 16000, 32000, 64000, 125000, 250000, 500000,1000000};
 
     private TextView questions;
     private TextView question;
@@ -28,11 +38,6 @@ public class QuizActivity extends AppCompatActivity {
 
     private AppCompatButton nextBtn;
 
-    private Timer quizTimer;
-
-    private int totalTimeInMins = 1;
-
-    private int seconds = 0;
 
     private List<QuestionsList> questionsLists;
 
@@ -46,7 +51,12 @@ public class QuizActivity extends AppCompatActivity {
         setContentView(R.layout.activity_quiz);
 
         final ImageView backbtn = findViewById(R.id.backBtn);
-        final TextView timer = findViewById(R.id.timer);
+
+
+
+        money_Won_Textview = findViewById(R.id.money_Won);
+        money_Guaranteed_Textview = findViewById(R.id.money_Guaranteed);
+
 
         questions = findViewById(R.id.questions);
         question = findViewById(R.id.question);
@@ -60,14 +70,20 @@ public class QuizActivity extends AppCompatActivity {
 
 
         questionsLists = QuestionsBank.getQuestions();
-        startTimer(timer);
 
-        questions.setText((currentQuestionPosition + 1) + "/" + questionsLists.size());
+        questions.setText(prizeMoneyRange[0] + " $ Question");
+
+        money_Won_Textview.setText("" + currMoneyWon);
+        money_Guaranteed_Textview.setText("" + finalMoney);
+
+
         question.setText(questionsLists.get(0).getQuestion());
         option1.setText(questionsLists.get(0).getOption1());
         option2.setText(questionsLists.get(0).getOption2());
         option3.setText(questionsLists.get(0).getOption3());
         option4.setText(questionsLists.get(0).getOption4());
+
+
 
         //when a button is clicked, it will highlight that button, and return other buttons to default color
         option1.setOnClickListener(new View.OnClickListener() {
@@ -203,8 +219,6 @@ public class QuizActivity extends AppCompatActivity {
         backbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                quizTimer.purge();
-                quizTimer.cancel();
 
                 startActivity(new Intent(QuizActivity.this, MainActivity.class));
                 finish();
@@ -217,6 +231,19 @@ public class QuizActivity extends AppCompatActivity {
     private void changeNextQuestion() {
 
         currentQuestionPosition++;
+
+
+
+        currMoneyWon = prizeMoneyRange[currentQuestionPosition - 1];
+
+        money_Won_Textview.setText("" + currMoneyWon);
+
+        if (currMoneyWon == 1000 || currMoneyWon == 32000 || currMoneyWon == 1000000){
+
+            finalMoney = currMoneyWon;
+        }
+
+        money_Guaranteed_Textview.setText("" + finalMoney);
 
 //        if((currentQuestionPosition+1) == questionsLists.size()){
 //            nextBtn.setText("Submit Quiz");
@@ -237,18 +264,20 @@ public class QuizActivity extends AppCompatActivity {
             option4.setBackgroundResource(R.drawable.round_back_white_stroke2_10);
             option4.setTextColor(Color.parseColor("#1F6BB8"));
 
-            questions.setText((currentQuestionPosition + 1) + "/" + questionsLists.size());
+            questions.setText((prizeMoneyRange[currentQuestionPosition])  + " $ Question");
             question.setText(questionsLists.get(currentQuestionPosition).getQuestion());
             option1.setText(questionsLists.get(currentQuestionPosition).getOption1());
             option2.setText(questionsLists.get(currentQuestionPosition).getOption2());
             option3.setText(questionsLists.get(currentQuestionPosition).getOption3());
             option4.setText(questionsLists.get(currentQuestionPosition).getOption4());
+
+
+            //here is the code for the winner winner chicken dinner
         } else {
-            quizTimer.purge();
-            quizTimer.cancel();
-            Intent intent = new Intent(QuizActivity.this, QuizResults.class);
-            intent.putExtra("correct", getCorrectAnswers());
-            intent.putExtra("incorrect", getInCorrectAnswers());
+
+            Intent intent = new Intent(QuizActivity.this, millionaire_Win.class);
+            intent.putExtra("Final_Money", finalMoney);
+
             startActivity(intent);
 
             finish();
@@ -257,69 +286,7 @@ public class QuizActivity extends AppCompatActivity {
 
     }
 
-    //Starts the timer for quiz
-    private void startTimer(TextView timerTextView) {
 
-
-        quizTimer = new Timer();
-
-        quizTimer.scheduleAtFixedRate(new TimerTask() {
-            @Override
-            public void run() {
-
-
-                if (seconds == 0 && totalTimeInMins > 0) {
-                    totalTimeInMins--;
-                    seconds = 59;
-                } else if (seconds == 0 && totalTimeInMins == 0) {
-
-
-                    quizTimer.purge();
-                    quizTimer.cancel();
-
-
-                    runOnUiThread(new Runnable() {
-                        public void run() {
-
-                            Toast.makeText(QuizActivity.this, "Time Over", Toast.LENGTH_SHORT).show();
-                        }
-                    });
-
-                    Intent intent = new Intent(QuizActivity.this, QuizResults.class);
-                    intent.putExtra("correct", getCorrectAnswers());
-                    intent.putExtra("incorrect", getInCorrectAnswers());
-                    startActivity(intent);
-
-                    finish();
-                } else {
-                    seconds--;
-                }
-
-                //Timer runs on background, this ensures the timer is updated in UI
-                runOnUiThread(new Runnable() {
-                    @Override
-                    public void run() {
-
-
-                        String finalMinutes = String.valueOf(totalTimeInMins);
-                        String finalSeconds = String.valueOf(seconds);
-
-                        if (finalMinutes.length() == 1) {
-                            finalMinutes = "0" + finalMinutes;
-                        }
-
-                        if (finalSeconds.length() == 1) {
-
-                            finalSeconds = "0" + finalSeconds;
-                        }
-
-                        timerTextView.setText(finalMinutes + ":" + finalSeconds);
-
-                    }
-                });
-            }
-        }, 1000, 1000);
-    }
 
     //function to retrieve the amount of correct answers at the end of the test.
     private int getCorrectAnswers() {
@@ -363,9 +330,6 @@ public class QuizActivity extends AppCompatActivity {
     public void onBackPressed() {
         super.onBackPressed();
 
-        quizTimer.purge();
-        quizTimer.cancel();
-
         startActivity(new Intent(QuizActivity.this, MainActivity.class));
         finish();
     }
@@ -401,6 +365,16 @@ public class QuizActivity extends AppCompatActivity {
         } else if (option4.getText().toString().equals(getAnswer)) {
             option4.setBackgroundResource(R.drawable.round_back_green10);
             option4.setTextColor(Color.WHITE);
+        }
+
+        if (!selectedOptionByUser.equals(getAnswer)){
+
+            Intent intent = new Intent(QuizActivity.this, QuizResults.class);
+            intent.putExtra("Final_Money", finalMoney);
+
+            startActivity(intent);
+
+            finish();
         }
         questionsLists.get(currentQuestionPosition).setUserSelectedAnswer(selectedOptionByUser);
     }

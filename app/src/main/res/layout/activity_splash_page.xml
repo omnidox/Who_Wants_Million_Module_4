@@ -1,62 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/scroll"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:background="@drawable/background">
-
-
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scroll"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="match_parent"
+    android:background="@drawable/miliion_background"
     tools:context=".SplashPage">
 
-    <ImageView
-        android:id="@+id/welcomeIcon"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:layout_marginEnd="10dp"
-        android:layout_marginTop="30dp"
-        android:adjustViewBounds="true"
-        android:src="@drawable/welcome1"/>
-
-    <ImageView
-        android:id="@+id/toIcon"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        android:adjustViewBounds="true"
-        android:src="@drawable/twotwotwo"
-        android:layout_below="@id/welcomeIcon"
-        android:layout_centerHorizontal="true"/>
-
-    <ImageView
-        android:id="@+id/quizTimeIcon"
-        android:layout_width="300dp"
-        android:layout_height="150dp"
-        android:adjustViewBounds="true"
-        android:src="@drawable/quiz_banner2"
-        android:layout_below="@id/toIcon"
-        android:layout_centerHorizontal="true"/>
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/clickContinueBtn"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:layout_below="@id/quizTimeIcon"
-        android:layout_marginTop="50dp"
+        android:layout_margin="20dp"
+        android:background="@drawable/round_back_blue20"
         android:text="Click to Continue"
         android:textColor="#FFFFFF"
-        android:background="@drawable/round_back_green20"
-        android:layout_alignParentBottom="true"
-        android:layout_margin="20dp"
- />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.654" />
 
 
+</androidx.constraintlayout.widget.ConstraintLayout>
 
-</RelativeLayout>
-
-</ScrollView>

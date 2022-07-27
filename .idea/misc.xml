@@ -3,12 +3,15 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Mobile_Computing_Git/Module4_Projects/app/src/main/res/drawable/round_back_blue20.xml" value="0.2265" />
+        <entry key="..\:/Mobile_Computing_Git/Module4_Projects/app/src/main/res/drawable/round_back_green20.xml" value="0.2265" />
         <entry key="..\:/Mobile_Computing_Git/Module4_Projects/app/src/main/res/layout/activity_display_screen.xml" value="0.22826086956521738" />
         <entry key="..\:/Mobile_Computing_Git/Module4_Projects/app/src/main/res/layout/activity_login_register_page.xml" value="0.22826086956521738" />
         <entry key="..\:/Mobile_Computing_Git/Module4_Projects/app/src/main/res/layout/activity_main.xml" value="0.22826086956521738" />
+        <entry key="..\:/Mobile_Computing_Git/Module4_Projects/app/src/main/res/layout/activity_millionaire_win.xml" value="0.2" />
         <entry key="..\:/Mobile_Computing_Git/Module4_Projects/app/src/main/res/layout/activity_prev_scores.xml" value="0.22826086956521738" />
-        <entry key="..\:/Mobile_Computing_Git/Module4_Projects/app/src/main/res/layout/activity_quiz.xml" value="0.22826086956521738" />
-        <entry key="..\:/Mobile_Computing_Git/Module4_Projects/app/src/main/res/layout/activity_quiz_results.xml" value="0.22826086956521738" />
+        <entry key="..\:/Mobile_Computing_Git/Module4_Projects/app/src/main/res/layout/activity_quiz.xml" value="0.4" />
+        <entry key="..\:/Mobile_Computing_Git/Module4_Projects/app/src/main/res/layout/activity_quiz_results.xml" value="0.2" />
         <entry key="..\:/Mobile_Computing_Git/Module4_Projects/app/src/main/res/layout/activity_registration_page.xml" value="0.22826086956521738" />
         <entry key="..\:/Mobile_Computing_Git/Module4_Projects/app/src/main/res/layout/activity_rules.xml" value="0.22826086956521738" />
         <entry key="..\:/Mobile_Computing_Git/Module4_Projects/app/src/main/res/layout/activity_splash_page.xml" value="0.22826086956521738" />
