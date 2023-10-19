@@ -15,33 +15,33 @@ This repository contains the code for a mobile application that simulates the po
 
 ## Code Structure
 
-- [`MainActivity.java`](https://github.com/omnidox/Who_Wants_Million_Module_4/blob/main/app/src/main/java/com/example/whowantsmillionaire/MainActivity.java): The main activity that launches when the application starts.
-- [`LoginRegisterPage.java`](https://github.com/omnidox/Who_Wants_Million_Module_4/blob/main/app/src/main/java/com/example/whowantsmillionaire/LoginRegisterPage.java): Handles the login and registration functionalities.
-- [`QuizActivity.java`](https://github.com/omnidox/Who_Wants_Million_Module_4/blob/main/app/src/main/java/com/example/whowantsmillionaire/QuizActivity.java): Manages the quiz gameplay.
-- [`QuizResults.java`](https://github.com/omnidox/Who_Wants_Million_Module_4/blob/main/app/src/main/java/com/example/whowantsmillionaire/QuizResults.java): Displays the results after the quiz is completed.
-- [`PrevScores.java`](https://github.com/omnidox/Who_Wants_Million_Module_4/blob/main/app/src/main/java/com/example/whowantsmillionaire/PrevScores.java): Shows the previous scores of the user.
-- [`RegistrationPage.java`](https://github.com/omnidox/Who_Wants_Million_Module_4/blob/main/app/src/main/java/com/example/whowantsmillionaire/RegistrationPage.java): Manages the user registration process.
-- [`ISharedPreference.java`](https://github.com/omnidox/Who_Wants_Million_Module_4/blob/main/app/src/main/java/com/example/whowantsmillionaire/ISharedPreference.java): Interface for shared preferences.
-- [`SecuredSharePref.java`](https://github.com/omnidox/Who_Wants_Million_Module_4/blob/main/app/src/main/java/com/example/whowantsmillionaire/SecuredSharePref.java): Implementation of secured shared preferences.
-- [`SplashPage.java`](https://github.com/omnidox/Who_Wants_Million_Module_4/blob/main/app/src/main/java/com/example/whowantsmillionaire/SplashPage.java): Displays the splash page when the app is launched.
-- [`millionaire_Win.java`](https://github.com/omnidox/Who_Wants_Million_Module_4/blob/main/app/src/main/java/com/example/whowantsmillionaire/millionaire_Win.java): Displays the winning page when a user wins the quiz.
-- [`TestActivity.java`](https://github.com/omnidox/Who_Wants_Million_Module_4/blob/main/app/src/main/java/com/example/whowantsmillionaire/TestActivity.java): A test activity for debugging and testing purposes.
-- [`QuestionsBank.java`](https://github.com/omnidox/Who_Wants_Million_Module_4/blob/main/app/src/main/java/com/example/whowantsmillionaire/QuestionsBank.java): Contains the bank of questions for the quiz.
-- [`QuestionsList.java`](https://github.com/omnidox/Who_Wants_Million_Module_4/blob/main/app/src/main/java/com/example/whowantsmillionaire/QuestionsList.java): Manages the list of questions.
+- [`MainActivity.java`](https://github.com/omnidox/Who_Wants_Million_Module_4/blob/master/app/src/main/java/com/example/whowantsmillionaire/MainActivity.java): The main activity that launches when the application starts.
+- [`LoginRegisterPage.java`](https://github.com/omnidox/Who_Wants_Million_Module_4/blob/master/app/src/main/java/com/example/whowantsmillionaire/LoginRegisterPage.java): Handles the login and registration functionalities.
+- [`QuizActivity.java`](https://github.com/omnidox/Who_Wants_Million_Module_4/blob/master/app/src/main/java/com/example/whowantsmillionaire/QuizActivity.java): Manages the quiz gameplay.
+- [`QuizResults.java`](https://github.com/omnidox/Who_Wants_Million_Module_4/blob/master/app/src/main/java/com/example/whowantsmillionaire/QuizResults.java): Displays the results after the quiz is completed.
+- [`PrevScores.java`](https://github.com/omnidox/Who_Wants_Million_Module_4/blob/master/app/src/main/java/com/example/whowantsmillionaire/PrevScores.java): Shows the previous scores of the user.
+- [`RegistrationPage.java`](https://github.com/omnidox/Who_Wants_Million_Module_4/blob/master/app/src/main/java/com/example/whowantsmillionaire/RegistrationPage.java): Manages the user registration process.
+- [`ISharedPreference.java`](https://github.com/omnidox/Who_Wants_Million_Module_4/blob/master/app/src/main/java/com/example/whowantsmillionaire/ISharedPreference.java): Interface for shared preferences.
+- [`SecuredSharePref.java`](https://github.com/omnidox/Who_Wants_Million_Module_4/blob/master/app/src/main/java/com/example/whowantsmillionaire/SecuredSharePref.java): Implementation of secured shared preferences.
+- [`SplashPage.java`](https://github.com/omnidox/Who_Wants_Million_Module_4/blob/master/app/src/main/java/com/example/whowantsmillionaire/SplashPage.java): Displays the splash page when the app is launched.
+- [`millionaire_Win.java`](https://github.com/omnidox/Who_Wants_Million_Module_4/blob/master/app/src/main/java/com/example/whowantsmillionaire/millionaire_Win.java): Displays the winning page when a user wins the quiz.
+- [`TestActivity.java`](https://github.com/omnidox/Who_Wants_Million_Module_4/blob/master/app/src/main/java/com/example/whowantsmillionaire/TestActivity.java): A test activity for debugging and testing purposes.
+- [`QuestionsBank.java`](https://github.com/omnidox/Who_Wants_Million_Module_4/blob/master/app/src/main/java/com/example/whowantsmillionaire/QuestionsBank.java): Contains the bank of questions for the quiz.
+- [`QuestionsList.java`](https://github.com/omnidox/Who_Wants_Million_Module_4/blob/master/app/src/main/java/com/example/whowantsmillionaire/QuestionsList.java): Manages the list of questions.
 
 ## Layouts
 
 The application also contains various XML layout files that define the user interface for different activities. These layouts include:
 
-- [`activity_main.xml`](https://github.com/omnidox/Who_Wants_Million_Module_4/blob/main/app/src/main/res/layout/activity_main.xml): Main activity layout.
-- [`activity_quiz.xml`](https://github.com/omnidox/Who_Wants_Million_Module_4/blob/main/app/src/main/res/layout/activity_quiz.xml): Layout for the quiz gameplay.
-- [`activity_quiz_results.xml`](https://github.com/omnidox/Who_Wants_Million_Module_4/blob/main/app/src/main/res/layout/activity_quiz_results.xml): Layout for displaying quiz results.
-- [`activity_prev_scores.xml`](https://github.com/omnidox/Who_Wants_Million_Module_4/blob/main/app/src/main/res/layout/activity_prev_scores.xml): Layout for showing previous scores.
-- [`activity_registration_page.xml`](https://github.com/omnidox/Who_Wants_Million_Module_4/blob/main/app/src/main/res/layout/activity_registration_page.xml): Layout for the registration page.
-- [`activity_login_register_page.xml`](https://github.com/omnidox/Who_Wants_Million_Module_4/blob/main/app/src/main/res/layout/activity_login_register_page.xml): Layout for the login and registration page.
-- [`activity_splash_page.xml`](https://github.com/omnidox/Who_Wants_Million_Module_4/blob/main/app/src/main/res/layout/activity_splash_page.xml): Layout for the splash page.
-- [`activity_millionaire_win.xml`](https://github.com/omnidox/Who_Wants_Million_Module_4/blob/main/app/src/main/res/layout/activity_millionaire_win.xml): Layout for the winning page.
-- [`activity_test.xml`](https://github.com/omnidox/Who_Wants_Million_Module_4/blob/main/app/src/main/res/layout/activity_test.xml): Layout for the test activity.
+- [`activity_main.xml`](https://github.com/omnidox/Who_Wants_Million_Module_4/blob/master/app/src/main/res/layout/activity_main.xml): Main activity layout.
+- [`activity_quiz.xml`](https://github.com/omnidox/Who_Wants_Million_Module_4/blob/master/app/src/main/res/layout/activity_quiz.xml): Layout for the quiz gameplay.
+- [`activity_quiz_results.xml`](https://github.com/omnidox/Who_Wants_Million_Module_4/blob/master/app/src/main/res/layout/activity_quiz_results.xml): Layout for displaying quiz results.
+- [`activity_prev_scores.xml`](https://github.com/omnidox/Who_Wants_Million_Module_4/blob/master/app/src/main/res/layout/activity_prev_scores.xml): Layout for showing previous scores.
+- [`activity_registration_page.xml`](https://github.com/omnidox/Who_Wants_Million_Module_4/blob/master/app/src/main/res/layout/activity_registration_page.xml): Layout for the registration page.
+- [`activity_login_register_page.xml`](https://github.com/omnidox/Who_Wants_Million_Module_4/blob/master/app/src/main/res/layout/activity_login_register_page.xml): Layout for the login and registration page.
+- [`activity_splash_page.xml`](https://github.com/omnidox/Who_Wants_Million_Module_4/blob/master/app/src/main/res/layout/activity_splash_page.xml): Layout for the splash page.
+- [`activity_millionaire_win.xml`](https://github.com/omnidox/Who_Wants_Million_Module_4/blob/master/app/src/main/res/layout/activity_millionaire_win.xml): Layout for the winning page.
+- [`activity_test.xml`](https://github.com/omnidox/Who_Wants_Million_Module_4/blob/master/app/src/main/res/layout/activity_test.xml): Layout for the test activity.
 
 ## Conclusion
 
